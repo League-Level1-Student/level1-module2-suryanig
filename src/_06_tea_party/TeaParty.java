@@ -7,9 +7,27 @@ public class TeaParty {
  	 * Isaac Newton was knighted, so say "Hello Sir Isaac Newton".
  	 **/
 
-	public String welcome(String name, boolean b, boolean c) {
+	public String welcome(String name, boolean isWoman, boolean isKnighted) {
 		// TODO Auto-generated method stub
-		return null;
+		String greeting = "Hello ";
+		if (isWoman) {
+			if(isKnighted) {
+				greeting += "Lady ";
+			}
+			else {
+				greeting += "Ms. ";
+			}
+		}
+		else {
+			if(isKnighted) {
+				greeting += "Sir ";
+			}
+			else {
+				greeting += "Mr. ";
+			}
+		}
+		greeting += name;
+		return greeting;
 	}
 
 }
